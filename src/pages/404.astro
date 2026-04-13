@@ -1,0 +1,109 @@
+---
+import '../layouts/BaseLayout.astro';
+layout: ../layouts/BaseLayout.astro;
+title: "Страница не найдена | 404"
+description: "Страница не найдена. Вернитесь на главную или перейдите в нужный раздел сайта."
+---
+
+<section class="page-404">
+  <div class="container">
+    <div class="404-content">
+      <div class="error-code">404</div>
+      <h1>Страница не найдена</h1>
+      <p class="error-message">
+        К сожалению, страница, которую вы ищете, не найдена или была перемещена.
+      </p>
+      <div class="404-actions">
+        <a href="/" class="btn btn-primary btn-large">
+          Возврат на главную
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/></svg>
+        </a>
+        <a href="/contact" class="btn btn-secondary btn-large">
+          Наши контакты
+        </a>
+      </div>
+      
+      <div class="quick-links">
+        <h3>Быстрые ссылки:</h3>
+        <ul>
+          <li><a href="/">Главная</a></li>
+          <li><a href="/services">Услуги</a></li>
+          <li><a href="/portfolio">Портфолио</a></li>
+          <li><a href="/about">Обо мне</a></li>
+          <li><a href="/contact">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.page-404 {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+}
+
+.404-content {
+  text-align: center;
+  max-width: 600px;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 0 30px rgba(135, 168, 122, 0.3);
+}
+
+.404-content h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.404-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.quick-links {
+  border-top: 1px solid var(--color-primary);
+  padding-top: var(--spacing-lg);
+}
+
+.quick-links h3 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.quick-links ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quick-links a {
+  color: var(--color-accent);
+}
+
+.quick-links a:hover {
+  text-decoration: underline;
+}
+</style>

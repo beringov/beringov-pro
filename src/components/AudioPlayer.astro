@@ -1,0 +1,120 @@
+---
+interface Props {
+  title: string;
+  src: string;
+  duration: string;
+}
+
+const { title, src, duration } = Astro.props;
+---
+
+<div class="audio-player-card">
+  <audio id="audio-source" src={src} preload="metadata">
+    Ваш браузер не поддерживает аудиозапись.
+  </audio>
+  
+  <div class="player-controls">
+    <button class="control-btn play-pause" aria-label="Play">
+      <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+      <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="player-info">
+    <h4 class="player-title">{title}</h4>
+    <span class="player-duration">{duration}</span>
+  </div>
+</div>
+
+<script>
+  const audio = document.getElementById('audio-source');
+  const playBtn = document.querySelector('.play-pause');
+  const iconPlay = document.querySelector('.icon-play');
+  const iconPause = document.querySelector('.icon-pause');
+  
+  if (audio && playBtn) {
+    playBtn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'block';
+      } else {
+        audio.pause();
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+      }
+    });
+    
+    audio.addEventListener('play', () => {
+      iconPlay.style.display = 'none';
+      iconPause.style.display = 'block';
+    });
+    
+    audio.addEventListener('pause', () => {
+      iconPlay.style.display = 'block';
+      iconPause.style.display = 'none';
+    });
+  }
+</script>
+
+<style>
+  .audio-player-card {
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 1px solid var(--color-primary);
+  }
+  
+  .player-controls {
+    flex-shrink: 0;
+  }
+  
+  .control-btn {
+    background: var(--color-white);
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-base);
+  }
+  
+  .control-btn:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
+  
+  .player-info {
+    flex: 1;
+  }
+  
+  .player-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+  
+  .player-duration {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+  }
+  
+  .disclaimer {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+  }
+</style>

@@ -1,0 +1,193 @@
+---
+import '../layouts/BaseLayout.astro';
+
+import AudioPlayer from '../components/AudioPlayer.astro';
+---
+
+---
+import '../layouts/BaseLayout.astro';
+layout: ../layouts/BaseLayout.astro;
+title: "Услуги - Создание медитаций | Юрий Берингов"
+description: "Профессиональные услуги по созданию медитаций: монтаж записей, AI-генерация через Suno, саунд-дизайн. Цены, сроки, примеры работ."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Мои услуги</h1>
+    <p class="subtitle">Профессиональное создание медитаций и wellness-аудио</p>
+  </div>
+</section>
+
+<section class="service-detail">
+  <div class="container">
+    <div class="service-section">
+      <div class="service-header">
+        <span class="service-tag">Популярное</span>
+        <h2>Монтаж медитаций из ваших записей</h2>
+        <p>Вы присылаете голосовые заметки, черновики или сырые записи — я превращаю их в профессиональные медитации.</p>
+      </div>
+      
+      <div class="service-content">
+        <div class="service-details">
+          <h3>Что входит в услугу:</h3>
+          <ul class="feature-list detailed-list">
+            <li><strong>Обработка голоса:</strong> удаление шумов, пауз, фоновых помех, исправление ошибок речи</li>
+            <li><strong>Структурирование:</strong> логическая организация текста медитации</li>
+            <li><strong>Монтаж:</strong> склейка, плавные переходы, работа с динамикой</li>
+            <li><strong>AI-музыка:</strong> генерация фоновой музыки через Suno в нужной тональности</li>
+            <li><strong>Mastering:</strong> финальная обработка для профессионального звучания</li>
+            <li><strong>Экспорт:</strong> доставка в WAV (качественно) и MP3 (для мобильного)</li>
+          </ul>
+        </div>
+        
+        <div class="service-media">
+          <div class="audio-preview">
+            <h3>Пример работы:</h3>
+            <AudioPlayer 
+              title="Медитация на осознанность"
+              src="/audio/demo-meditation.wav"
+              duration="12:34"
+            />
+            <small class="disclaimer">* Демо-аудио условия: сгенерировано для примера</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <div class="pricing">
+          <div class="price-tag">
+            <span class="price-value">5 000₽</span>
+            <span class="price-unit">минимум</span>
+          </div>
+          <p class="terms">* От 30 минут звучания, сроки 7 дней, 2 итерации правок</p>
+        </div>
+        <a href="/contact" class="btn btn-primary btn-large">Заказать монтаж</a>
+      </div>
+    </div>
+    
+    <hr class="divider">
+    
+    <div class="service-section">
+      <div class="service-header">
+        <span class="service-tag featured">Премиум</span>
+        <h2>Создание медитаций с нуля</h2>
+        <p>Полный цикл: от идеи до готового аудио-файла. Разрабатываю структуру, генерирую музыку, создаю уникальные wellness-аудио.</p>
+      </div>
+      
+      <div class="service-content">
+        <div class="service-details">
+          <h3>Процесс работы:</h3>
+          <ol class="process-list">
+            <li><strong>Бриф и концепция:</strong> обсуждаем тему, длительность, настроение, целевую аудиторию</li>
+            <li><strong>Структура и текст:</strong> составляю сценарий медитации с психологически верными техниками</li>
+            <li><strong>AI-генерация:</strong> создаю 3-5 вариантов фоновой музыки через Suno AI</li>
+            <li><strong>Запись голоса:</strong> (опционально) работаю с вашим голосом или предлагаю готовые voiceover</li>
+            <li><strong>Сведение и мастеринг:</strong> финальная обработка, балансы, эквалайзер</li>
+            <li><strong>Доставка:</strong> готовые файлы + варианты на выбор</li>
+          </ol>
+          
+          <h3>Варианты выполнения:</h3>
+          <ul class="feature-list detailed-list">
+            <li><strong>AI-генерация (полная):</strong> 100% музыка через Suno, ваш голос поверх</li>
+            <li><strong>AI-генерация + voiceover:</strong> полная музыка + профессиональный диктор</li>
+            <li><strong>Саунд-дизайн:</strong> уникальные звуковые ландшафты для особых практик</li>
+          </ul>
+        </div>
+        
+        <div class="service-media">
+          <div class="audio-preview">
+            <h3>Пример работы:</h3>
+            <AudioPlayer 
+              title="Суточная медитация: Сон и восстановление"
+              src="/audio/demo-sleep-meditation.wav"
+              duration="18:45"
+            />
+            <small class="disclaimer">* Демо-аудио условия: сгенерировано для примера</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <div class="pricing">
+          <div class="price-tag">
+            <span class="price-value">15 000₽</span>
+            <span class="price-unit">старт</span>
+          </div>
+          <p class="terms">* До 30 минут звучания, сроки 10 дней, 3 варианта музыки, безлимитные правки</p>
+        </div>
+        <a href="/contact" class="btn btn-primary btn-large">Заказать медитацию</a>
+      </div>
+    </div>
+    
+    <hr class="divider">
+    
+    <div class="service-section">
+      <div class="service-header">
+        <span class="service-tag">Дополнительно</span>
+        <h2>Саунд-дизайн и отдельные услуги</h2>
+        <p>Разовые заказы и дополнительные услуги для completion ваших проектов.</p>
+      </div>
+      
+      <div class="service-content">
+        <div class="extra-services">
+          <div class="extra-service">
+            <h4>Коррекция тональности</h4>
+            <p>Монтаж нескольких медитаций в единую серию для коллектива или серии занятий</p>
+            <span class="price">от 3 000₽</span>
+          </div>
+          
+          <div class="extra-service">
+            <h4>Аудио для йоги</h4>
+            <p>Специально адаптированные треки для йога-практик с таймингом поз</p>
+            <span class="price">от 8 000₽</span>
+          </div>
+          
+          <div class="extra-service">
+            <h4>Консультация</h4>
+            <p>Индивидуальная консультация по использованию Suno AI и техникам</p>
+            <span class="price">3 000₽ / час</span>
+          </div>
+          
+          <div class="extra-service">
+            <h4>Пакетное предложение</h4>
+            <p>Создание серии из 5 медитаций со скидкой 20%</p>
+            <span class="price">60 000₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="frequency-questions">
+  <div class="container">
+    <h2>Частые вопросы</h2>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Какие форматы вы принимаете?</h3>
+        <p>Любые: WAV, MP3, M4A, AIFF. Лучше всего — WAV без сжатия для лучшего качества обработки.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Сколько времени занимает работа?</h3>
+        <p>Монтаж из записей: 7 дней. Создание с нуля: 10 дней. Срочные заказы возможны (+50% к стоимости).</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Есть ли гарантия правок?</h3>
+        <p>Да! В монatalge — 2 итерации бесплатно. В создании с нуля — безлимитные правки до полного удовлетворения.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Можно ли использовать музыку в коммерческих целях?</h3>
+        <p>Да, вы получаете полные права на все материалы. Мы используем Suno AI с коммерческой лицензией.</p>
+      </div>
+      
+      <div class="faq-item">
+        <h3>Как происходит оплата?</h3>
+        <p>50% предоплата, 50% после утверждения черновика. Принимаются карты, переводы, invoice для компаний.</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,118 @@
+---
+import '../styles/main.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
+const { title, description, keywords = '' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Юрий Берингов" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beringov.github.io/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://beringov.github.io/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    
+    <title>{title}</title>
+    
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="/" class="nav-logo">
+          <span class="logo-text">Берингов</span>
+          <span class="logo-subtext">Audio</span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="/" class="nav-link">Главная</a></li>
+          <li><a href="/services" class="nav-link">Услуги</a></li>
+          <li><a href="/portfolio" class="nav-link">Портфолио</a></li>
+          <li><a href="/about" class="nav-link">Обо мне</a></li>
+          <li><a href="/contact" class="nav-link btn btn-small">Контакты</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Меню">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </nav>
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="logo-text">Берингов</span>
+            <p class="tagline">Professional audio production for wellness</p>
+          </div>
+          <div class="footer-links">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li><a href="/services">Услуги</a></li>
+              <li><a href="/portfolio">Портфолио</a></li>
+              <li><a href="/about">Обо мне</a></li>
+              <li><a href="/contact">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Контакты</h4>
+            <ul>
+              <li><a href="mailto:med@beringov.pro">med@beringov.pro</a></li>
+              <li><a href="https://t.me/iberingovpro">Telegram</a></li>
+              <li><a href="https://www.facebook.com/beringov">Facebook</a></li>
+              <li><a href="https://instagram.com/beringov.pro">Instagram</a></li>
+              <li><a href="https://www.youtube.com/channel/UCmKFvWABbjUjNdOkpBAMaKw">YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Юрий Берингов. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      menuBtn?.addEventListener('click', () => {
+        navMenu?.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+      });
+      
+      // Close on click outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu?.contains(e.target) && !menuBtn?.contains(e.target)) {
+          navMenu?.classList.remove('active');
+          menuBtn?.classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beringov.github.io/sitemap.xml
+
+# Disallow admin pages if you add them later
+# Disallow: /admin/

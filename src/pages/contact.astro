@@ -1,0 +1,98 @@
+---
+import '../layouts/BaseLayout.astro';
+layout: ../layouts/BaseLayout.astro;
+title: "Контакты"
+description: "Свяжитесь со мной для создания медитаций. Закажите консультацию или оставить заявку на сайте."
+---
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Контакты</h1>
+    <p class="subtitle">Готовы начать? Свяжитесь со мной</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Как со мной связаться</h2>
+        <p>Выберите удобный способ connect: форма обратной связи, email или Telegram.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">📧</div>
+            <h3>Email</h3>
+            <a href="mailto:med@beringov.pro">med@beringov.pro</a>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">✈️</div>
+            <h3>Telegram</h3>
+            <a href="https://t.me/iberingovpro">@iberingovpro</a>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">📱</div>
+            <h3>WhatsApp</h3>
+            <a href="#">+7 (999) 000-00-00</a>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">🌍</div>
+            <h3>Соцсети</h3>
+            <a href="https://www.facebook.com/beringov">Facebook</a>
+            <a href="https://instagram.com/beringov.pro">Instagram</a>
+            <a href="https://www.youtube.com/channel/UCmKFvWABbjUjNdOkpBAMaKw">YouTube</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h2 class="form-title">Отправить заявку</h2>
+        <form class="contact-form-element" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="email@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Тип услуги</label>
+            <select id="service" name="service">
+              <option value="montage">Монтаж медитаций из записей</option>
+              <option value="creation">Создание с нуля</option>
+              <option value="sound-design">Саунд-дизайн</option>
+              <option value="consultation">Консультация</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Сообщение *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Расскажите о вашем проекте, желаемой длительности, теме медитации и других деталях..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="partner-section">
+  <div class="container">
+    <h2>Партнеры и клиентские отзывы</h2>
+    <p>Мои работы использовались известными практикующими в wellness-индустрии.</p>
+    
+    <div class="client-logos">
+      <div class="logo-placeholder">Клиент 1</div>
+      <div class="logo-placeholder">Клиент 2</div>
+      <div class="logo-placeholder">Клиент 3</div>
+    </div>
+  </div>
+</section>
