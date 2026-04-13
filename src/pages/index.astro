@@ -1,187 +1,58 @@
 ---
-layout: ../layouts/BaseLayout.astro
-title: "Юрий Берингов | Профессиональные медитации и саунд-дизайн"
-description: "Создание медитаций на заказ — от идеи до готового аудио. Монтаж записей, AI-генерация через Suno, профессиональный саунд-дизайн."
-keywords: ["медитации", "зачас", "аудио", "suno", "саунд-дизайн", "Юрий Берингов", " meditation", "meditation creation", "audio editing"]
+import '../styles/main.css';
 ---
 
 <section class="hero">
   <div class="hero-content">
     <h1 class="hero-title">
-      Создаю <span class="gradient-text">медитации с нуля</span><br />
-      и редактирую ваши записи
+      Создаю <span class="gradient-text">медитации</span><br />
+      и редактирую записи
     </h1>
     <p class="hero-subtitle">
-      Профессиональный монтаж, AI-генерация музыки через Suno,<br />
-      психологический саунд-дизайн для wellness-практик
+      Превращаю ваши идеи в готовые wellness-медитации<br />
+      с AI-музыкой и профессиональным звуком
     </p>
     <div class="hero-cta">
-      <a href="/services" class="btn btn-primary">
-        Посмотреть услуги
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
-      <a href="/portfolio" class="btn btn-secondary">
-        Для заказа
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
+      <a href="/services" class="btn btn-primary">Услуги</a>
+      <a href="/portfolio" class="btn btn-secondary">Портфолио</a>
     </div>
-  </div>
-  <div class="hero-background">
-    <div class="gradient-orb orb-1"></div>
-    <div class="gradient-orb orb-2"></div>
-    <div class="gradient-orb orb-3"></div>
   </div>
 </section>
 
 <section class="features">
   <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Что я делаю</h2>
-      <p class="section-subtitle">Две основные услуги для вашего wellness-проекта</p>
-    </div>
-    
+    <h2 class="section-title">Мои услуги</h2>
     <div class="feature-grid">
       <article class="feature-card">
         <div class="feature-icon">🎙️</div>
         <h3>Монтаж из записей</h3>
-        <p>Превращаю ваши голосовые заметки и черновики в готовые медитации</p>
+        <p>От 5 000₽ • 7 дней</p>
         <ul class="feature-list">
-          <li>Удаление шумов и пауз</li>
-          <li>Исправление ошибок речи</li>
-          <li>Добавление AI-музыки</li>
-          <li>Профессиональный мастеринг</li>
+          <li>Обработка голоса</li>
+          <li>AI-музыка через Suno</li>
+          <li>Мастеринг</li>
         </ul>
-        <div class="feature-footer">
-          <span class="price">от 5 000₽</span>
-          <a href="/contact" class="btn btn-small">Заказать</a>
-        </div>
+        <a href="/contact" class="btn">Заказать</a>
       </article>
       
       <article class="feature-card featured">
         <div class="feature-icon">✨</div>
         <h3>Создание с нуля</h3>
-        <p>Полный цикл: от концепции до готового аудио-файла</p>
+        <p>От 15 000₽ • 10 дней</p>
         <ul class="feature-list">
-          <li>Разработка структуры медитации</li>
-          <li>Генерация музыки через Suno AI</li>
-          <li>Запись голоса (по запросу)</li>
-          <li>3 варианта музыки на выбор</li>
+          <li>Разработка концепции</li>
+          <li>3 варианта музыки</li>
+          <li>Безлимит правок</li>
         </ul>
-        <div class="feature-footer">
-          <span class="price">от 15 000₽</span>
-          <a href="/contact" class="btn btn-small">Заказать</a>
-        </div>
+        <a href="/contact" class="btn">Заказать</a>
       </article>
-      
-      <article class="feature-card">
-        <div class="feature-icon">🎵</div>
-        <h3>Саунд-дизайн</h3>
-        <p>Создаю уникальные аудио-атмосферы для практики</p>
-        <ul class="feature-list">
-          <li>Фоновые эмбиенты</li>
-          <li>Soundscapes для медитации</li>
-          <li>Натуральные звуки</li>
-          <li>Интеграция с вашим голосом</li>
-        </ul>
-        <div class="feature-footer">
-          <span class="price">индивидуально</span>
-          <a href="/contact" class="btn btn-small">Заказать</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="process">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Процесс работы</h2>
-      <p class="section-subtitle">Простой и прозрачный путь к вашей медитации</p>
-    </div>
-    
-    <div class="process-steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Идея и бриф</h3>
-        <p>Обсуждаем концепцию, длительность, стиль и ваши ожидания</p>
-      </div>
-      
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Запись /чейза</h3>
-        <p>Вы присылаете записи ИЛИ я создаю структуру с нуля</p>
-      </div>
-      
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>AI-генерация</h3>
-        <p>Создаю фоновую музыку через Suno AI в нужных тональностях</p>
-      </div>
-      
-      <div class="step">
-        <div class="step-number">4</div>
-        <h3>Доставка</h3>
-        <p>Готовый материал в WAV/MP3 + варианты на выбор</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="social-proof">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Почему мне доверяют</h2>
-    </div>
-    
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <p>Юрий превратил мои грубые записи в потрясающие медитации. Музыка Suno идеально дополняет голос.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">К</div>
-          <div class="author-info">
-            <span class="author-name">Ксения</span>
-            <span class="author-role">Коуч-психолог</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <p>Заказала создание медитации с нуля — результат превзошёл ожидания. Профессионально и быстро.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">А</div>
-          <div class="author-info">
-            <span class="author-name">Александр</span>
-            <span class="author-role">Йога-инструктор</span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="testimonial-card">
-        <div class="quote-mark">"</div>
-        <p>Мой клиент получил готовую медитацию за 7 дней. Очень доволен вниманием к деталям.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">М</div>
-          <div class="author-info">
-            <span class="author-name">Мария</span>
-            <span class="author-role">Управляющая духовной студией</span>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <div class="container">
-    <div class="cta-content">
-      <h2>Готовы начать?</h2>
-      <p>Свяжитесь со мной для обсуждения вашего проекта</p>
-      <div class="cta-cta-group">
-        <a href="/contact" class="btn btn-primary btn-large">Отправить заявку</a>
-        <a href="https://t.me/iberingovpro" class="btn btn-secondary btn-large">Telegram</a>
-      </div>
-    </div>
+    <h2>Готовы начать?</h2>
+    <a href="/contact" class="btn btn-primary">Отправить заявку</a>
   </div>
 </section>

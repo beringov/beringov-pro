@@ -1,100 +1,45 @@
 ---
-import '../layouts/BaseLayout.astro';
-layout: ../layouts/BaseLayout.astro;
-title: "Обо мне - Юрий Берингов | Создание медитаций"
-description: "Рассказ о пути от видеомонтажа к профессиональным медитациям, опыте работы с AI Suno и подходе к созданию wellness-аудио."
+import '../styles/main.css';
 ---
 
-<section class="page-hero">
-  <div class="container">
-    <h1>Обо мне</h1>
-    <p class="subtitle">Путь от видеомонтажа к профессиональным медитациям</p>
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Обо мне</h1>
+    <p class="hero-subtitle">Путь от видеомонтажа к профессиональным медитациям</p>
   </div>
 </section>
 
-<section class="about-content">
+<section class="features">
   <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>Кто я</h2>
-        <p>Меня зовут <strong>Юрий Берингов</strong>. Я специализируюсь на создании профессиональных медитаций и wellness-аудио.</p>
-        
-        <p>Мой путь начался с видеомонтажа в 2019 году. Я работал с различными проектами: от рекламных роликов до образовательного контента для социальных сетей.</p>
-        
-        <h3>Почему медитации?</h3>
-        <p>За время работы я感悟е, что часть моей деятельности — создание успокаивающего контента — напрямую связана с ментальным здоровьем и wellness. Медитации — это инструмент для улучшения качества жизни, и я хочу помочь другим людям в этом.</p>
-        
-        <h3>Мой подход</h3>
-        <p>Я использую современные технологии, в том числе <strong>Suno AI</strong> для генерации уникальной фоновой музыки. Это позволяет создавать медитации, которые:
-        <ul>
-          <li>Идеально сочетаются с голосом</li>
-          <li>Не имеют版权问题</li>
-          <li>Можно адаптировать под любые задачи</li>
-        </ul>
-        </p>
-        
-        <h3>Опыт и навыки</h3>
-        <p>✅ Опыт в монтаже с 2019 года<br>
-           ✅ Профессиональные инструменты Probably (Adobe Premiere, Audition)<br>
-           ✅ Экспертиза в Suno AI для генерации аудио<br>
-           ✅ Понимание психологии медитативных практик<br>
-           ✅ Опыт работы с клиентами из wellness-индустрии</p>
-      </div>
+    <h2 class="section-title">Кто я</h2>
+    <p>Меня зовут <strong>Юрий Берингов</strong>. Я специализируюсь на создании профессиональных медитаций.</p>
+    <p>Мой опыт включает работу с видеомонтажом с 2019 года и использование <strong>Suno AI</strong> для создания уникальной фоновой музыки.</p>
+    
+    <h2 class="section-title">Подход</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <div class="feature-icon">🎙️</div>
+        <h3>Голос</h3>
+        <p>Чистая обработка, удаление шумов</p>
+      </article>
       
-      <div class="about-visual">
-        <div class="visual-card">
-          <div class="visual-icon">🎙️</div>
-          <h3>Голос</h3>
-          <p>Чистая обработка, удаление шумов, идеальное звучание</p>
-        </div>
-        
-        <div class="visual-card">
-          <div class="visual-icon">🎵</div>
-          <h3>Звук</h3>
-          <p>Уникальные композиции через Suno AI</p>
-        </div>
-        
-        <div class="visual-card">
-          <div class="visual-icon">🧘</div>
-          <h3>Сознание</h3>
-          <p>Медитации, которые работают</p>
-        </div>
-      </div>
+      <article class="feature-card">
+        <div class="feature-icon">🎵</div>
+        <h3>Звук</h3>
+        <p>Уникальные композиции через Suno AI</p>
+      </article>
+      
+      <article class="feature-card">
+        <div class="feature-icon">🧘</div>
+        <h3>Сознание</h3>
+        <p>Медитации, которые работают</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="statistic-section">
+<section class="cta-section">
   <div class="container">
-    <h2>Мои работы</h2>
-    <p>За годы практики я создал десятки медитаций для различных клиентов: от индивидуальных практиков до небольших студий wellness.</p>
-    
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number">50+</span>
-        <span class="stat-label">готовых медитаций</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">30+</span>
-        <span class="stat-label">огрубленных клиентов</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">2019+</span>
-        <span class="stat-label">лет опыта в монтаже</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="about-contact">
-  <div class="container">
-    <h2>Свяжитесь со мной</h2>
-    <p>Готовы создать уникальную медитацию? Давайте обсудим ваш проект.</p>
-    
-    <div class="contact-links">
-      <a href="/contact" class="btn btn-primary">Оставить заявку</a>
-      <a href="https://t.me/iberingovpro" class="btn btn-secondary">Telegram</a>
-      <a href="mailto:med@beringov.pro" class="btn btn-secondary">Email</a>
-    </div>
+    <a href="/contact" class="btn btn-primary">Связаться</a>
   </div>
 </section>
