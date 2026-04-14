@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Юрий Берингов | Медитации и Саунд-Дизайн</title>
+  <meta name="description" content="Создание медитаций на заказ - от идеи до готового аудио. Монтаж записей, AI-генерация через Suno">
+  <style>
+    :root {
+      --bg: #F5F0E8;
+      --primary: #87A87A;
+      --text: #2C3E50;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary) 0%, #6B8A60 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      margin: 0.5rem;
+    }
+    .btn:hover { opacity: 0.9; }
+    .features { padding: 4rem 2rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .icon { font-size: 3rem; margin-bottom: 1rem; }
+    footer {
+      text-align: center;
+      padding: 3rem;
+      background: var(--text);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div>
+      <h1>Создаю <span class="gradient-text">медитации с нуля</span><br>и редактирую ваши записи</h1>
+      <p style="font-size:1.2rem; margin: 1rem 0;">
+        Профессиональный монтаж, AI-генерация музыки через Suno,<br>
+        психологический саунд-дизайн для wellness-практик
+      </p>
+      <a href="mailto:med@beringov.pro" class="btn">Заказать медитацию</a>
+      <a href="https://t.me/iberingovpro" class="btn">Telegram</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Мои услуги</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🎙️</div>
+        <h3>Монтаж из записей</h3>
+        <p>Превращаю ваши голосовые заметки в готовые медитации</p>
+        <p style="margin-top:1rem; font-weight:bold; color: var(--primary);">От 5 000₽</p>
+      </div>
+      <div class="card">
+        <div class="icon">✨</div>
+        <h3>Создание с нуля</h3>
+        <p>Полный цикл: от идеи до готового аудио-файла</p>
+        <p style="margin-top:1rem; font-weight:bold; color: var(--primary);">От 15 000₽</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎵</div>
+        <h3>Саунд-дизайн</h3>
+        <p>Создаю уникальные аудио-атмосферы для практики</p>
+        <p style="margin-top:1rem; font-weight:bold; color: var(--primary);">Индивидуально</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Юрий Берингов | med@beringov.pro</p>
+  </footer>
+</body>
+</html>
